@@ -58,15 +58,22 @@ if(empty($result)) {
                           )";
                 $result = mysqli_query($database, $query);
 }
+
+if (isset($_POST['email']) && isset($_POST['password'])){
+ echo "$_POST[email] $_POST[password]";
+}
+if (empty($_COOKIE['name'])){
+ echo "<form method='post'>e:<input name='email'>p:<input name='password'><input type='submit'></form>";
+}
+
+
 // public list of who has what checked out
 echo "[checkout list]";
 
 // public list of available hardware
 echo "[available list]";
 
-if (empty($_COOKIE['name'])){
- echo "<form method='post'>e:<input name='email'>p:<input name='password'><input type='submit'></form>";
-}
+
 
 
 ?>
