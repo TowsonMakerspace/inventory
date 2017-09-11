@@ -63,7 +63,7 @@ Simplicity: Choose Options Before Scanning
 		</table>
 		<table class="center" width="500" border="1">
 			<tr>
-				<td>Scan Document Barcode<br>
+				<td>Scan Inventory Barcode<br>
 						<input name="text1"
 							onKeyUp="toCount('text1','sBann','{CHAR} characters left',100);"
 							id="text1" value="" onChange="upda()">
