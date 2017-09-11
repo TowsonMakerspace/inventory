@@ -68,6 +68,8 @@ if (isset($_POST['email']) && isset($_POST['password'])){
 }
 if (empty($_COOKIE['name'])){
  echo "<form method='post'>e:<input name='email'>p:<input name='password'><input type='submit'></form>";
+}else{
+ echo "Welcome, $_COOKIE[name] <br>";
 }
 
 
