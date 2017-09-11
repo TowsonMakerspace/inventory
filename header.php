@@ -1,3 +1,4 @@
+<?PHP
 // contents of settings.php
 // <?PHP
 // $database_password="your db password";
