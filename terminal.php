@@ -28,7 +28,7 @@
 	</table>
 <?php }?>
 Simplicity: Choose Options Before Scanning
-	<form action="/terminal.php" name="form1" id="form1" method="POST"
+	<form action="terminal.php" name="form1" id="form1" method="POST"
 		onSubmit="{calc(); return false;}">
 		<table class="center" width="500" border="1">
 			<tr>
