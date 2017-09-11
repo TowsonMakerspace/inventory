@@ -59,11 +59,14 @@ if(empty($result)) {
                 $result = mysqli_query($database, $query);
 }
 // public list of who has what checked out
+echo "[checkout list]";
 
 // public list of available hardware
+echo "[available list]";
 
-
-
+if (empty($_COOKIE['name'])){
+ echo "[login form]";
+}
 
 
 ?>
