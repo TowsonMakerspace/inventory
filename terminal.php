@@ -1,3 +1,4 @@
+<?PHP include_once('header.php'); ?>
 <script src="terminal.js"></script>
 <link
 	rel="stylesheet" type="text/css" href="/assets/css/terminal.css" />
