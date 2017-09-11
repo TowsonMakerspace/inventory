@@ -75,10 +75,8 @@ if (empty($_COOKIE['name'])){
 // menu
 ?>
 <table><tr>
- <td>TERMINAL</td>
-
- <td>SEARCH</td>
- <td>New Inventory</td>
- <td>New Member</td>
+ <td><a href='terminal.php'>TERMINAL</a></td>
+ <td>Inventory</td>
+ <td>Members</td>
  <td>Log Out</td>
 </tr></table>
