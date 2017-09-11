@@ -61,6 +61,9 @@ if(empty($result)) {
 
 if (isset($_POST['email']) && isset($_POST['password'])){
  echo "$_POST[email] $_POST[password]";
+ setcookie("email", "admin@localhost");
+ setcookie("name", "admin");
+ setcookie("id", "1");
 }
 if (empty($_COOKIE['name'])){
  echo "<form method='post'>e:<input name='email'>p:<input name='password'><input type='submit'></form>";
