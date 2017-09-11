@@ -28,7 +28,7 @@ if(empty($result)) {
                           PRIMARY KEY  (ID)
                           )";
                 $result = mysqli_query($database, $query);
-                mysqli_query("insert into users (NAME,EMAIL,PASSWORD,PERMISSION_LEVEL) values ('admin','admin@localhost','password','99') ");
+                mysqli_query($database, "insert into users (NAME,EMAIL,PASSWORD,PERMISSION_LEVEL) values ('admin','admin@localhost','password','99') ");
 }
 $query = "SELECT ID FROM HARDWARE";
 $result = mysqli_query($database, $query);
