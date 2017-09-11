@@ -68,16 +68,27 @@ if (isset($_POST['email']) && isset($_POST['password'])){
 }
 if (empty($_COOKIE['name'])){
  echo "<form method='post'>e:<input name='email'>p:<input name='password'><input type='submit'></form>";
+ die();
 }else{
  echo "Welcome, $_COOKIE[name] <br>";
 }
 
-
+// menu
+?>
+<table><tr>
+ <td>CHECK OUT</td>
+ <td>CHECK IN</td>
+ <td>SEARCH</td>
+ <td>New Inventory</td>
+ <td>New Member</td>
+ <td>Log Out</td>
+</tr></table>
+<?PHP
 // public list of who has what checked out
-echo "[checkout list]";
+echo "<hr>[checkout list]";
 
 // public list of available hardware
-echo "[available list]";
+echo "<hr>[available list]";
 
 
 
