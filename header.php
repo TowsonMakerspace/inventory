@@ -1,4 +1,6 @@
 <?PHP
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 // contents of settings.php
 // <?PHP
 // $database_password="your db password";
