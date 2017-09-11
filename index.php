@@ -5,7 +5,7 @@ if (!file_exists($config_file)){
  die("setup required");
 }
 include('settings.php');
-$database = mysqli_connect('localhost', 'root', $database_password);
+$database = mysqli_connect('localhost', 'root', $database_password, 'inventory');
 
 /* check connection */
 if (mysqli_connect_errno()) {
@@ -14,12 +14,11 @@ if (mysqli_connect_errno()) {
 }
 
 
-mysqli_query($database, "CREATE DATABASE IF NOT EXISTS inventory");
-
 $query = "SELECT ID FROM USERS";
 $result = mysqli_query($database, $query);
 
 if(empty($result)) {
+         echo "creating table";
                 $query = "CREATE TABLE USERS (
                           ID int(11) AUTO_INCREMENT,
                           EMAIL varchar(255) NOT NULL,
@@ -29,7 +28,7 @@ if(empty($result)) {
                           APPLICATION_IN_PROGRESS int,
                           PRIMARY KEY  (ID)
                           )";
-                $result = mysqli_query($dbConnection, $query);
+                $result = mysqli_query($database, $query);
 }
 
 // this is intended to be a single page site
