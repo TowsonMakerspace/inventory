@@ -70,7 +70,7 @@ if (empty($_COOKIE['name'])){
  echo "<form method='post'>e:<input name='email'>p:<input name='password'><input type='submit'></form>";
  die();
 }else{
- echo "Welcome, $_COOKIE[name] <br>";
+ echo "<h1>Welcome, $_COOKIE[name]</h1>";
 }
 
 // menu
