@@ -1,6 +1,6 @@
 <?PHP
 // Connect to MySQL
-$link = mysql_connect('localhost', 'root', '');
+$link = mysqli_connect('localhost', 'root', '');
 $q = "CREATE DATABASE IF NOT EXISTS inventory";
 
 
