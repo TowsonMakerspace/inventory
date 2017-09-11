@@ -1,4 +1,4 @@
-<script src="/assets/js/terminal.js"></script>
+<script src="terminal.js"></script>
 <link
 	rel="stylesheet" type="text/css" href="/assets/css/terminal.css" />
 <body onLoad="clear()">
