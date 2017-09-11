@@ -1,6 +1,11 @@
 <?PHP
 // Connect to MySQL
-$database = mysqli_connect('localhost', 'root', '');
+$config_file = 'settings.php';
+if (!file_exists($config_file)){
+ die("setup required");
+}
+include('settings.php');
+$database = mysqli_connect('localhost', 'root', $database_password);
 
 /* check connection */
 if (mysqli_connect_errno()) {
@@ -28,10 +33,7 @@ if(empty($result)) {
 }
 
 // this is intended to be a single page site
-$config_file = 'settings.json';
-if (!file_exists($config_file)){
- die("setup required");
-}
+
 
 
 
