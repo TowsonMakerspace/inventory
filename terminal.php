@@ -20,7 +20,7 @@
 <?php if(isset($check) && empty($send)){?>
 	<table class="center">
 		<tr>
-			<td><h1>Docutrack Lookup: Nothing Recorded</h1></td>
+			<td><h1>Inventory Lookup: Nothing Recorded</h1></td>
 		</tr>
 		<tr>
 			<td style='font-size:25px;'> <?php echo $check;?></td>
@@ -28,7 +28,7 @@
 	</table>
 <?php }?>
 Simplicity: Choose Options Before Scanning
-	<form action="/terminal/submit/<?php echo $small;?>" name="form1" id="form1" method="POST"
+	<form action="/terminal.php" name="form1" id="form1" method="POST"
 		onSubmit="{calc(); return false;}">
 		<table class="center" width="500" border="1">
 			<tr>
@@ -36,38 +36,19 @@ Simplicity: Choose Options Before Scanning
 						<?php if(isset($todo)){?>
 						<option><?php echo $todo;?></option>
 						<?php }?>
-						<option>LOOKUP</option>
+						<option>SEARCH</option>
 						<option>RECORD</option>
 				</select></td><td><select name='document' onChange="form1.text1.focus()">
 						<?php if(isset($last)){?>
 						<option><?php echo $last;?></option>
 						<?php }?>
-						<option>OUT WITH COURIER</option>
-						<option>SIGNED AFFIDAVIT</option>
-						<option>FILED AFFIDAVIT</option>
-						<optgroup label="Deed">
-						<option>LIEN APPLICATION</option>
-						<option>LIEN CERTIFICATE</option>
-						<option>DEED DROP OFF</option>
-						<option>DEED APPROVED</option>
-						<option>DEED RECORDED</option>
-						<option>DEED DEFICIENCY: CLIENT</option>
-						<option>DEED DEFICIENCY: OFFICE</option>
-						<option>DEED REJECTED</option>
+						
+						<optgroup label="hardware">
+						<option>check out</option>
+						<option>check in</option>
+						
 						</optgroup>
-						<optgroup label="E-File">
-						<option>E-FILE SUBMITTED</option>
-						<option>E-FILE ACCEPTED</option>
-						<option>E-FILE REJECTED</option>
-						</optgroup>
-						<optgroup label="Old Options">
-						<option>OUT WITH SERVER-FBS</option>
-						<option>PRINTED AFFIDAVIT</option>
-						<option>NOTARIZED AFFIDAVIT</option>
-						<option>NOTARIZED AFFIDAVIT</option>
-						<option>OTD/SOT READY FOR COURIER</option>
-						<option>OTD/SOT FILED/RECORDED</option>
-						</optgroup>
+						
 				</select></td>
 				<td>
 					<select name="month"><?php echo $month;?></select>
