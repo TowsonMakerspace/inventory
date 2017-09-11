@@ -6,7 +6,7 @@ $config_file = 'settings.php';
 if (!file_exists($config_file)){
  die("setup required");
 }
-include('settings.php');
+include_once('settings.php');
 $database = mysqli_connect('localhost', 'root', $database_password, 'inventory');
 /* check connection */
 if (mysqli_connect_errno()) {
@@ -74,10 +74,6 @@ if (empty($_COOKIE['name'])){
 }
 
 // menu
+include_once('menu.php');
 ?>
-<table><tr>
- <td><a href='terminal.php'>TERMINAL</a></td>
- <td>Inventory</td>
- <td>Members</td>
- <td>Log Out</td>
-</tr></table>
+
