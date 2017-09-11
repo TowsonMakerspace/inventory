@@ -64,6 +64,7 @@ if (isset($_POST['email']) && isset($_POST['password'])){
  setcookie("email", "admin@localhost");
  setcookie("name", "admin");
  setcookie("id", "1");
+ header('Location: /inventory/');
 }
 if (empty($_COOKIE['name'])){
  echo "<form method='post'>e:<input name='email'>p:<input name='password'><input type='submit'></form>";
