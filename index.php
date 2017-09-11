@@ -20,6 +20,7 @@ if(empty($result)) {
                 $query = "CREATE TABLE USERS (
                           ID int(11) AUTO_INCREMENT,
                           EMAIL varchar(255) NOT NULL,
+                          NAME varchar(255) NOT NULL,
                           PASSWORD varchar(255) NOT NULL,
                           PERMISSION_LEVEL int,
                           APPLICATION_COMPLETED int,
@@ -27,6 +28,7 @@ if(empty($result)) {
                           PRIMARY KEY  (ID)
                           )";
                 $result = mysqli_query($database, $query);
+                mysqli_query("insert into users (NAME,EMAIL,PASSWORD,PERMISSION_LEVEL) values ('admin','admin@localhost','password','99') ");
 }
 $query = "SELECT ID FROM HARDWARE";
 $result = mysqli_query($database, $query);
