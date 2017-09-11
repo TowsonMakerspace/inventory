@@ -65,7 +65,7 @@ echo "[checkout list]";
 echo "[available list]";
 
 if (empty($_COOKIE['name'])){
- echo "[login form]";
+ echo "<form method='post'>e:<input name='email'>p:<input name='password'><input type='submit'></form>";
 }
 
 
