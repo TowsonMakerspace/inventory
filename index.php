@@ -12,11 +12,8 @@ if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 }
-
-
 $query = "SELECT ID FROM USERS";
 $result = mysqli_query($database, $query);
-
 if(empty($result)) {
          echo "creating table";
                 $query = "CREATE TABLE USERS (
@@ -31,10 +28,9 @@ if(empty($result)) {
                 $result = mysqli_query($database, $query);
 }
 
-// this is intended to be a single page site
+// public list of who has what checked out
 
-
-
+// public list of available hardware
 
 
 
