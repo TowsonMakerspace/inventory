@@ -11,6 +11,7 @@ if (!file_exists($config_file)){
 }
 include_once('settings.php');
 include_once('database.php');
+include_once('functions.php');
 if (isset($_POST['email']) && isset($_POST['password'])){
  echo "$_POST[email] $_POST[password]";
  setcookie("email", "admin@localhost");
