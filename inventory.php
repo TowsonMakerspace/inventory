@@ -14,7 +14,7 @@ PRIMARY KEY  (ID)
 if(isset($_POST['NAME']) && isset($_POST['DESCRIPTION'])){
   mysqli_query($database, "insert into HARDWARE (NAME,DESCRIPTION) values ('$_POST[NAME]','$_POST[DESCRIPTION]')");
 }
-$r = mysqli_query($database, "select * from HARDWARE order by ID");
+$r = mysqli_query($database, "select * from HARDWARE order by NAME");
 ?>
 
 <form method="post">
