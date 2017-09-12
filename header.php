@@ -13,11 +13,19 @@ include_once('settings.php');
 include_once('database.php');
 include_once('functions.php');
 if (isset($_POST['email']) && isset($_POST['password'])){
- echo "$_POST[email] $_POST[password]";
- setcookie("email", "admin@localhost");
- setcookie("name", "admin");
- setcookie("id", "1");
- header('Location: /inventory/');
+ $e = $_POST['email'];
+ $p = $_POST['password'];
+ $r = mysqli_query($database, "select * from USERS where EMAIL = '$e' and PASSWORD = '$p'");
+ $d = mysqli_fetch_array($r,MYSQLI_ASSOC);
+ if($d['ID']){
+  //echo "$_POST[email] $_POST[password]";
+  setcookie("email", $e);
+  setcookie("name", $d['NAME']);
+  setcookie("id", $d['ID']);
+  header('Location: /inventory/');
+ }else{
+   echo "<li>Login Failed</li>";
+ }
 }
 if (empty($_COOKIE['name'])){
  echo "<form method='post'>e:<input name='email'>p:<input name='password'><input type='submit'></form>";
