@@ -18,7 +18,13 @@ $r = mysqli_query($database, "select * from HARDWARE order by NAME");
 ?>
 
 <form method="post">
-  <div> Equipment: <input name="NAME"> Description:  <textarea name="DESCRIPTION"></textarea> <input type="submit"></div>
+  <table border="1" cellpadding="0" cellspacing="0" width="100%"><tr>
+    <td>Equipment</td>
+    <td><input name="NAME"></td>
+    <td>Description</td>
+    <td><textarea name="DESCRIPTION"></textarea></td>
+    <td><input type="submit"></td>
+    </tr></table>
 
 <table border="1" cellpadding="0" cellspacing="0" width="100%">
  <?PHP 
