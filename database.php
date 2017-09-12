@@ -1,5 +1,6 @@
 <?PHP
 if(empty($SECURITY)){ die('No direct file access'); }
+global $database;
 $database = mysqli_connect('localhost', 'root', $database_password, 'inventory');
 /* check connection */
 if (mysqli_connect_errno()) {
