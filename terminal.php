@@ -13,6 +13,20 @@ $year = mkyear();
 	<pre><?PHP if (isset($_POST)){ print_r($_POST); } ?></pre>
 	
 	
+	<?PHP
+	if (isset($_POST['name']) && isset($_POST['text1']) ){
+		$parts = explode('-',$_POST['text1']);
+		$hardware_id = str_replace('%','',$parts[2]);
+		$member_id = '1';
+		$action = $_POST['document'];
+		if ($_POST['todo'] == 'RECORD'){
+			echo "RECORD: $action hardware $hardware_id user $member_id ";	
+		}else{
+			echo "Lookup: hardware $hardware_id";	
+		}
+	}
+	?>
+	
 	
 
 <?php if(isset($check) && isset($send)){?>
@@ -77,7 +91,7 @@ $year = mkyear();
 		
 		<table  class="center" width="500" border="1">
 			<tr>
-				<td>Member Name: <input name="name"></td>
+				<td>Member Name: <input name="name" value="make this a dropdown"></td>
 				
 				<td>Scan Inventory Barcode<br>
 						<input name="text1"
