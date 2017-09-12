@@ -26,7 +26,7 @@ $r = mysqli_query($database, "select * from HARDWARE order by NAME");
 <table border="1" cellpadding="0" cellspacing="0" width="100%">
  <?PHP 
  while($hardware=mysqli_fetch_array($r,MYSQLI_ASSOC)){
-  echo "<tr><td>$hardware[ID]</td><td>$hardware[NAME]</td><td>$hardware[DESCRIPTION]</td></tr>";
+  echo "<tr><td>$hardware[ID]</td><td>$hardware[NAME]</td><td>$hardware[DESCRIPTION]</td><td><img src='barcode.php?barcode=TMS-RENTAL-$hardware[ID]'></td></tr>";
  }
  ?>
 </table>
