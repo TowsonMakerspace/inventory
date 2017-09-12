@@ -73,6 +73,8 @@ $year = mkyear();
 		
 		<table  class="center" width="500" border="1">
 			<tr>
+				<td>Member Name: <input name="name"></td>
+				
 				<td>Scan Inventory Barcode<br>
 						<input name="text1"
 							onKeyUp="toCount('text1','sBann','{CHAR} characters left',100);"
