@@ -8,6 +8,12 @@ function hardware($id){
 	return $d['NAME'].' ('.$d['DESCRIPTION'].')';
 }
 
+function member($id){
+	global $database;
+	$r = mysqli_query($database,"select * from USERS where ID = '$id'");
+	$d = mysqli_fetch_array($r,MYSQLI_ASSOC);
+	return $d['NAME'];
+}
 
 /**
 * Function for mkmonth
