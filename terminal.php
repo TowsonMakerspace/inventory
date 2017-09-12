@@ -21,6 +21,11 @@ $year = mkyear();
 		$action = $_POST['document'];
 		if ($_POST['todo'] == 'RECORD'){
 			echo "RECORD: $action hardware $hardware_id user $member_id ";	
+			if ($action == 'CHECK OUT'){
+				mysqli_query($database,"insert into CHECKOUT (hardware_id, users_id, date_out) values ('$hardware_id', '$member_id', NOW() )");
+			}else{
+				mysqli_query($database,"update CHECKOUT set date_back = NOW() where hardware_id = '$hardware_id' and users_id = '$member_id' ");
+			}
 		}else{
 			echo "Lookup: hardware $hardware_id";	
 		}
