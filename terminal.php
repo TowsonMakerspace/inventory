@@ -1,9 +1,10 @@
 <?PHP 
 include_once('header.php'); 
-$month = date('m');
-$day = date('d');
-$year = date('Y');
+$month = mkmonth();
+$day = mkday();
+$year = mkyear();
 ?>
+<center>
 <script src="terminal.js"></script>
 <link
 	rel="stylesheet" type="text/css" href="/assets/css/terminal.css" />
@@ -68,7 +69,9 @@ $year = date('Y');
 				</td>
 			</tr>
 		</table>
-		<table class="center" width="500" border="1">
+		
+		
+		<table  class="center" width="500" border="1">
 			<tr>
 				<td>Scan Inventory Barcode<br>
 						<input name="text1"
@@ -82,3 +85,4 @@ $year = date('Y');
 		</table>
 </form>
 <script>document.form1.text1.focus()</script>
+	</center>
