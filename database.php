@@ -29,7 +29,8 @@ if(empty($result)) {
          echo "creating table";
                 $query = "CREATE TABLE HARDWARE (
                           ID int(11) AUTO_INCREMENT,
-                          EMAIL varchar(255) NOT NULL,
+                          NAME varchar(255) NOT NULL,
+                          DESCRIPTION text,
                           PERMISSION_LEVEL int,
                           APPLICATION_COMPLETED int,
                           APPLICATION_IN_PROGRESS int,
