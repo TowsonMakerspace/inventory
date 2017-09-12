@@ -5,7 +5,7 @@ function hardware($id){
 	global $database;
 	$r = mysqli_query($database,"select * from HARDWARE where ID = '$id'");
 	$d = mysqli_fetch_array($r,MYSQLI_ASSOC);
-	return $d['name'].' ('.$description.')';
+	return $d['NAME'].' ('.$d['DESCRIPTION'].')';
 }
 
 
