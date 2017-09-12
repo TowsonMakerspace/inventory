@@ -20,7 +20,7 @@ if (isset($_POST['email']) && isset($_POST['password'])){
  header('Location: /inventory/');
 }
 ?>
-<img style="position: absolute; top:0px; right:0px; height:100px width:100px;" src="http://www.towsonmaker.space/wp-content/uploads/2017/08/Towson.png">
+<a href="https://www.towsonmaker.space"><img style="position: absolute; top:0px; right:0px;" height="100px" width="100px" src="http://www.towsonmaker.space/wp-content/uploads/2017/08/Towson.png"></a>
 <?PHP
 if (empty($_COOKIE['name'])){
  echo "<form method='post'>e:<input name='email'>p:<input name='password'><input type='submit'></form>";
