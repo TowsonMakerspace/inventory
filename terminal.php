@@ -1,4 +1,9 @@
-<?PHP include_once('header.php'); ?>
+<?PHP 
+include_once('header.php'); 
+$month = date('m');
+$day = date('d');
+$year = date('Y');
+?>
 <script src="terminal.js"></script>
 <link
 	rel="stylesheet" type="text/css" href="/assets/css/terminal.css" />
@@ -8,8 +13,8 @@
 <?php if(isset($check) && isset($send)){?>
 	<table class="center">
 		<tr>
-			<td>Check Status</td>
-			<td>Record Status</td>
+			<td>Check</td>
+			<td>Record</td>
 		</tr>
 		<tr>
 			<td> <?php echo $check;?></td>
@@ -28,7 +33,7 @@
 		</tr>
 	</table>
 <?php }?>
-Simplicity: Choose Options Before Scanning
+
 	<form action="terminal.php" name="form1" id="form1" method="POST"
 		onSubmit="{calc(); return false;}">
 		<table class="center" width="500" border="1">
@@ -37,16 +42,17 @@ Simplicity: Choose Options Before Scanning
 						<?php if(isset($todo)){?>
 						<option><?php echo $todo;?></option>
 						<?php }?>
-						<option>SEARCH</option>
+					
 						<option>RECORD</option>
+						<option>LOOKUP</option>
 				</select></td><td><select name='document' onChange="form1.text1.focus()">
 						<?php if(isset($last)){?>
 						<option><?php echo $last;?></option>
 						<?php }?>
 						
 						<optgroup label="hardware">
-						<option>check out</option>
-						<option>check in</option>
+						<option>CHECK IN</option>
+						<option>CHECK OUT</option>
 						
 						</optgroup>
 						
