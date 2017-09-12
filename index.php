@@ -8,12 +8,12 @@ $r = mysqli_query($database, "select * from CHECKOUT order by ID");
   <td>Hardware</td>
   <td>Member</td>
   <td style='background-color:orange;'>Checked Out</td>
-  <td style='background-color:green;'>Checked In</td>
+  <td style='background-color:lightgreen;'>Checked In</td>
  </tr>
   
  <?PHP 
  while($checkout=mysqli_fetch_array($r,MYSQLI_ASSOC)){
-  echo "<tr><td>$checkout[hardware_id]</td><td>$checkout[users_id]</td><td style='background-color:orange;'>$checkout[date_out]</td><td style='background-color:green;'>$checkout[date_back]</td></tr>";
+  echo "<tr><td>$checkout[hardware_id]</td><td>$checkout[users_id]</td><td style='background-color:orange;'>$checkout[date_out]</td><td style='background-color:lightgreen;'>$checkout[date_back]</td></tr>";
  }
  ?>
 </table>
