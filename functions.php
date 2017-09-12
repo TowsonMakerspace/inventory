@@ -1,6 +1,14 @@
 <?PHP
  if(empty($SECURITY)){ die('No direct file access'); } 
 
+function hardware($id){
+	global $database;
+	$r = mysqli_query($database,"select * from HARDWARE where ID = '$id'");
+	$d = mysqli_fetch_array($r,MYSQLI_ASSOC);
+	return $d['name'].' ('.$description.')';
+}
+
+
 /**
 * Function for mkmonth
 * 
