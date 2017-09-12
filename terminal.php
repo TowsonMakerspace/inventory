@@ -10,6 +10,10 @@ $year = mkyear();
 	rel="stylesheet" type="text/css" href="/assets/css/terminal.css" />
 <body onLoad="clear()">
 
+	<pre><?PHP if (isset($_POST)){ print_r($_POST); } ?></pre>
+	
+	
+	
 
 <?php if(isset($check) && isset($send)){?>
 	<table class="center">
