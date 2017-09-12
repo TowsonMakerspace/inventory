@@ -13,7 +13,7 @@ $r = mysqli_query($database, "select * from CHECKOUT order by ID");
   
  <?PHP 
  while($checkout=mysqli_fetch_array($r,MYSQLI_ASSOC)){
-  echo "<tr><td>".hardware($checkout['hardware_id'])."</td><td>$checkout[users_id]</td><td style='background-color:orange;'>$checkout[date_out]</td><td style='background-color:lightgreen;'>$checkout[date_back]</td></tr>";
+  echo "<tr><td>".hardware($checkout['hardware_id'])."</td><td>".members($checkout['users_id'])."</td><td style='background-color:orange;'>$checkout[date_out]</td><td style='background-color:lightgreen;'>$checkout[date_back]</td></tr>";
  }
  ?>
 </table>
