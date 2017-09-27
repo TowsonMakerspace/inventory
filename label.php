@@ -6,12 +6,15 @@ $r = mysqli_query($database, "select * from HARDWARE where ID = '$id' ");
 $hardware=mysqli_fetch_array($r,MYSQLI_ASSOC);
 ?>
 <center>
-  <h1>TOWSON</h1>
-  <h1>MAKERSPACE</h1>
-  <h1><?PHP echo $hardware['NAME']; ?></h1>
-  <h3><?PHP echo $hardware['DESCRIPTION']; ?></h3>
+  <div class='title'>TOWSON</div>
+  <div class='title'>MAKERSPACE</div>
+  <div class='part'><?PHP echo $hardware['NAME']; ?></div>
+  <div class='description'><?PHP echo $hardware['DESCRIPTION']; ?></div>
   <div><img src='barcode.php?barcode=TMS-RENTAL-<?PHP echo $hardware['ID']; ?>'></div>
 </center>
 <style>
   body{ margin:0px; padding:0px; }  
+  .title { font-size:30px; }
+  .part { font-size:20px; }
+  .description { font-size:15px; }
 </style>
