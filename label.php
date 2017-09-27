@@ -5,9 +5,9 @@ $id = $_GET['id'];
 $r = mysqli_query($database, "select * from HARDWARE where ID = '$id' ");
 $hardware=mysqli_fetch_array($r,MYSQLI_ASSOC);
 $sponsor = '';
-if ($hardware['SPONSOR'] != ''){
-  $sponsor = $hardware['SPONSOR']; 
-}
+//if ($hardware['SPONSOR'] != ''){
+//  $sponsor = $hardware['SPONSOR']; 
+//}
 ?>
 <center>
   <div class='title'>TOWSON</div>
