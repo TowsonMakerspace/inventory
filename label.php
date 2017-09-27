@@ -7,7 +7,7 @@ $hardware=mysqli_fetch_array($r,MYSQLI_ASSOC);
 ?>
 <center>
   <div><img src='http://www.towsonmaker.space/wp-content/uploads/2017/08/Towson.png'></div>
-  <h1>$hardware[NAME]</h1>
-  <h3>$hardware[DESCRIPTION]</h3>
-  <div><img src='barcode.php?barcode=TMS-RENTAL-$hardware[ID]'></div>
+  <h1><?PHP echo $hardware['NAME']; ?></h1>
+  <h3><?PHP echo $hardware['DESCRIPTION']; ?></h3>
+  <div><img src='barcode.php?barcode=TMS-RENTAL-<?PHP echo $hardware['ID']; ?>'></div>
 </center>
