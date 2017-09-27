@@ -18,5 +18,5 @@ $hardware=mysqli_fetch_array($r,MYSQLI_ASSOC);
   .title { font-size:30px; }
   .part { font-size:20px; }
   .description { font-size:15px; }
-  .sponsor { font-size:20px; font-variant:small_caps; }
+  .sponsor { font-size:20px; border:5px black inset; font-variant:small_caps; }
 </style>
