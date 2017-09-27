@@ -4,5 +4,10 @@ include('header.php');
 $id = $_GET['id'];
 $r = mysqli_query($database, "select * from HARDWARE where ID = '$id' ");
 $hardware=mysqli_fetch_array($r,MYSQLI_ASSOC);
-echo "<h1>$hardware[NAME]</h1><h3>$hardware[DESCRIPTION]</h3><br /><img src='barcode.php?barcode=TMS-RENTAL-$hardware[ID]'>";
 ?>
+<center>
+  <div><img src='http://www.towsonmaker.space/wp-content/uploads/2017/08/Towson.png'></div>
+  <h1>$hardware[NAME]</h1>
+  <h3>$hardware[DESCRIPTION]</h3>
+  <div><img src='barcode.php?barcode=TMS-RENTAL-$hardware[ID]'></div>
+</center>
