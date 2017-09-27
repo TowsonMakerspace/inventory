@@ -11,3 +11,6 @@ $hardware=mysqli_fetch_array($r,MYSQLI_ASSOC);
   <h3><?PHP echo $hardware['DESCRIPTION']; ?></h3>
   <div><img src='barcode.php?barcode=TMS-RENTAL-<?PHP echo $hardware['ID']; ?>'></div>
 </center>
+<style>
+  body{ margin:0px; padding:0px; }  
+</style>
