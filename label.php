@@ -1,5 +1,5 @@
 <?PHP
-include('header_minium.php');
+include('header_minimum.php');
 // this file will be for 4" x 5" labels ( fedex )
 $id = $_GET['id'];
 $r = mysqli_query($database, "select * from HARDWARE where ID = '$id' ");
