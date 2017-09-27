@@ -29,7 +29,7 @@ $r = mysqli_query($database, "select * from HARDWARE order by NAME");
 <table border="1" cellpadding="0" cellspacing="0" width="100%">
  <?PHP 
  while($hardware=mysqli_fetch_array($r,MYSQLI_ASSOC)){
-  echo "<tr><td><a href='?edit=$hardware[ID]'>$hardware[NAME]</a></td><td>$hardware[DESCRIPTION]</td><td><img src='barcode.php?barcode=TMS-RENTAL-$hardware[ID]'></td></tr>";
+  echo "<tr><td><a href='?edit=$hardware[ID]'>$hardware[NAME]</a></td><td>$hardware[DESCRIPTION]</td><td><a href='label.php?id=$hardware[ID]'>CLICK FOR BARCODE</a></td></tr>";
  }
  ?>
 </table>
